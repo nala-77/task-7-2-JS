@@ -1,0 +1,276 @@
+/* general styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: raleway;
+}
+.container {
+  padding: 50px 80px;
+}
+.flex {
+  display: flex;
+}
+section {
+  min-height: 100vh;
+}
+
+/* task-one */
+.first-section {
+  background-color: #5d6e8b;
+}
+.first-task {
+  justify-content: space-between;
+  align-items: center;
+}
+.first-task div {
+  width: 50%;
+}
+.first-task div:nth-child(2) {
+  width: 20%;
+}
+.first-task div:nth-child(2) img {
+  width: 180px;
+  height: 382px;
+}
+.first-task div h2 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.first-task div p {
+  color: white;
+}
+.images {
+  justify-content: center;
+  align-items: center;
+}
+.images img {
+  width: 100px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* task-two */
+:root {
+  --white: white;
+  --light-black: #1b1a1a;
+  --light-blue: rgb(47 78 88);
+  --blue: #0126f9;
+}
+.dark-theme {
+  --white: #171717;
+  --light-black: white;
+  --light-blue: #1c2c1e;
+  --blue: yellow;
+}
+.second-section {
+  background-color: var(--white);
+  color: var(--light-black);
+  position: relative;
+}
+.second-section div i {
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.second-section div i:hover {
+  color: var(--blue);
+}
+#sun {
+  display: none;
+}
+.second-section-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.second-section-content h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.second-section-content p {
+    font-weight: 500;
+    line-height: 1.5;
+}
+.svg {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  fill: var(--light-blue);
+}
+
+/* third-task */
+.third-section {
+  background-color: #1c0b28;
+}
+.third-section .content {
+  width: 80%;
+  margin: 80px auto;
+  color: #f3daf3;
+}
+.box-item {
+  margin: 30px 0;
+}
+div.question {
+  background-color: #986ead;
+  padding: 20px 10px;
+  cursor: pointer;
+  position: relative;
+}
+div.question h2 {
+  font-size: 20px;
+}
+div.question:after {
+  content: "﹀";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-weight: 900;
+}
+div.question.active:after {
+  content: " ︿";
+  top: 7px;
+}
+div.answer p {
+  line-height: 1.7;
+  background-color: #f2f2f2;
+  font-weight: 600;
+  padding: 25px 15px;
+  color: #211d25;
+}
+div.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* fourth-task */
+.fourth-section {
+  position: relative;
+  background-color: #d8d8d1;
+}
+.review {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9ea6c5;
+  padding: 80px 10px;
+  width: 35%;
+  border-radius: 15px;
+  text-align: center;
+}
+.review i {
+  font-size: 35px;
+  color: yellow;
+}
+
+
+/* small screen */
+@media (min-width: 577px) and (max-width: 768px) {
+  /* first-task */
+  .first-task {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .first-task div {
+    width: 400px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .first-task div:nth-child(2) {
+    width: 250px;
+  }
+  .first-task div:nth-child(2) img {
+    width: 130px;
+    height: auto;
+  }
+  .first-task div h2 {
+    font-size: 30px;
+  }
+  .images img {
+    width: 60px;
+  }
+  /* fourth-task */
+  .review {
+    width: 300px;
+  }
+}
+
+/* mobile screen */
+@media (min-width: 200px) and (max-width: 576px) {
+  .container {
+    padding: 50px 20px;
+  }
+  .first-task {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .first-task div {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .first-task div:nth-child(2) {
+    width: 150px;
+  }
+  .first-task div:nth-child(2) img {
+    width: 100px;
+    height: auto;
+  }
+
+  .first-task div h2 {
+    font-size: 18px;
+  }
+  .first-task div p {
+    font-size: 15px;
+  }
+  .images img {
+    width: 50px;
+  }
+/* second-task */
+  .second-section div i {
+    font-size: 30px;
+  }
+  .second-section-content h2 {
+    font-size: 20px;
+  }
+  .second-section-content p {
+    font-size: 12px;
+  }
+  /* third-task */
+  .third-section .content {
+    width: 260px;
+}
+  div.question {
+    width: 100%;
+    padding: 20px 5px;
+  }
+  div.question h2 {
+    font-size: 12px;
+  }
+  div.question:after {
+    right: 4px;
+    top: 20px;
+  }
+  div.question.active:after {
+    top: 11px;
+}
+  div.answer p {
+    font-size: 10px;
+  }
+
+  /* fourth-task */
+  .review {
+    width: 200px;
+    padding: 50px 20px;
+  }
+  .review i {
+    font-size: 25px;
+  }
+}
